@@ -1,0 +1,1 @@
+sudo zfs set compression=zstd-4 pool1

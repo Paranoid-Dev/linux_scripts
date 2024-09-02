@@ -1,0 +1,7 @@
+rsync -rh -e 'ssh -p 50001' --info=progress2 --stats --mkpath sourcedir admin@ip:destdir
+
+rsync -rh --info=progress2 --stats --mkpath sourcedir destdir
+
+rsync --info=progress2 -rh --no-whole-file --stats --mkpath sourcedir destdir
+
+rsync --info=progress2 -rh --checksum --stats --delete --mkpath sourcedir destdir
