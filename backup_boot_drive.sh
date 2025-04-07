@@ -4,8 +4,8 @@
 sudo rsync -qaHAXSx /mnt/backup_boot_drive/etc/fstab /tmp/fstab.backup
 
 # backup
-sudo rsync -qaHAXSx / /mnt/backup_boot_drive/
-sudo rsync -qaHAXSx /boot/ /mnt/backup_boot_drive/boot/
+sudo rsync -qaHAXSx --delete / /mnt/backup_boot_drive/
+sudo rsync -qaHAXSx --delete /boot/ /mnt/backup_boot_drive/boot/
 
 # copy over fstab
 sudo rsync -qaHAXSx /tmp/fstab.backup /mnt/backup_boot_drive/etc/fstab
